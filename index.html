@@ -544,10 +544,15 @@
     section{ min-height: auto; padding: 12vh 0; }
     .hero{ min-height: 100svh; justify-content: center; gap: 4vh; }
     .band-hero-title{
-      font-size: clamp(2.4rem, 13vw, 3.8rem);
-      line-height: .92;
+      font-size: clamp(2.2rem, 12vw, 3.6rem);
+      line-height: .9;
+      max-width: 100%;
     }
-    .band-hero-title span{ white-space: normal; }
+    .band-hero-title span{
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
     .band-hero-title .line-two i{ transform: none; }
     .sub-manifesto{ max-width: 100%; margin-top: 3vh; }
     .scroll-cue{ margin-top: 2vh; }
