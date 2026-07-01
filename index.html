@@ -273,9 +273,11 @@
     color: var(--text-muted);
     max-width: 42ch;
     width: 100%;
-    padding-right: 25px; 
-    word-break: break-word; 
-}
+    padding-right: 25px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
 
   .waveform{
     margin-top: 6vh;
@@ -563,8 +565,9 @@
       overflow: visible;
     }
     .sub-manifesto, .mission p, .sonic-details p, .connect p.lead{
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
       word-break: break-word;
+      hyphens: auto;
       padding-right: 10px;
     }
     .band-hero-title span{
