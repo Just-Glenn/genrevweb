@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Genesis Revelation</title>
 
@@ -22,14 +23,13 @@
 
   *{ box-sizing: border-box; }
 
-  html, body{
-    background: var(--bg);
-    color: var(--text-bright);
-    font-family: 'Syne', sans-serif;
-    width: 100%;
-    overflow-x: hidden; /* This keeps things from sliding off-screen */
-    position: relative;
-  }
+  html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 
   body{ position: relative; }
 
