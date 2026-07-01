@@ -220,12 +220,8 @@
     font-size: clamp(1rem, 1.3vw, 1.15rem);
     line-height: 1.8;
     color: var(--text-muted);
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+    max-width: 56ch;
     margin: 0 0 2.2em 0;
-    position: relative;
-    left: 0;
   }
   .verse{
     margin-top: 4vh;
@@ -262,26 +258,23 @@
     margin: 0;
     font-weight: 800;
   }
-  .sonic-details{
-    min-width: 0;
-  }
+  .sonic-details {
+  min-width: 0;
+  max-width: 100%;       /* Prevents the div from being wider than the screen */
+  overflow: hidden;      /* Prevents content from spilling out */
+}
   .sonic-details h3{
     font-size: clamp(1.4rem, 2.2vw, 2rem);
     font-weight: 700;
     margin: 0 0 3vh 0;
     text-transform: uppercase;
   }
-  .sonic-details p {
+  .sonic-details p{
     font-size: clamp(1rem, 1.2vw, 1.15rem);
     line-height: 1.75;
     color: var(--text-muted);
+    max-width: 42ch;
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding-right: 25px;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
   }
 
   .waveform{
@@ -570,17 +563,9 @@
       overflow: visible;
     }
     .sub-manifesto, .mission p, .sonic-details p, .connect p.lead{
-      overflow-wrap: anywhere;
+      overflow-wrap: break-word;
       word-break: break-word;
-      hyphens: auto;
-      padding-right: 0;
-      max-width: 100%;
-      width: 100%;
-    }
-
-    .mission p,
-    .sonic-details p{
-      left: 0;
+      padding-right: 10px;
     }
     .band-hero-title span{
       display: block;
