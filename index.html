@@ -27,7 +27,8 @@
     color: var(--text-bright);
     font-family: 'Syne', sans-serif;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* This keeps things from sliding off-screen */
+    position: relative;
   }
 
   body{ position: relative; }
@@ -548,10 +549,21 @@
     section{ min-height: auto; padding: 12vh 0; }
     .hero{ min-height: 100svh; justify-content: center; gap: 4vh; }
     .band-hero-title{
-      font-size: clamp(2rem, 10.5vw, 3.2rem);
-      line-height: .88;
-      max-width: 100%;
+      font-size: clamp(2.8rem, 12vw, 4.5rem);
+      line-height: 0.9;
       overflow: visible;
+      margin: 0;
+    }
+    .band-hero-title span{
+      display: block;
+      white-space: normal; /* Forces text to wrap */
+      word-break: break-word;
+      overflow: visible;
+    }
+    .sub-manifesto, .mission p, .sonic-details p, .connect p.lead{
+      overflow-wrap: break-word;
+      word-break: break-word;
+      padding-right: 10px;
     }
     .band-hero-title span{
       display: block;
