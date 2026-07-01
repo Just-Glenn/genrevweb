@@ -540,6 +540,17 @@
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 900px){
+    .viewport-grid{ padding: 0 5vw; }
+    section{ min-height: auto; padding: 12vh 0; }
+    .hero{ min-height: 100svh; justify-content: center; gap: 4vh; }
+    .band-hero-title{
+      font-size: clamp(2.4rem, 13vw, 3.8rem);
+      line-height: .92;
+    }
+    .band-hero-title span{ white-space: normal; }
+    .band-hero-title .line-two i{ transform: none; }
+    .sub-manifesto{ max-width: 100%; margin-top: 3vh; }
+    .scroll-cue{ margin-top: 2vh; }
     .sonic-grid{ grid-template-columns: 1fr; gap: 6vh; }
     .collage-grid{
       grid-template-columns: repeat(2, 1fr);
@@ -551,12 +562,26 @@
         "d e"
         "f f";
     }
-    .member-row{ grid-template-columns: 1fr; gap: 2.5vh; }
+    .member-row{ grid-template-columns: 1fr; gap: 2.5vh; padding: 4.5vh 0; }
     .member-row .member-index{ order: -1 !important; }
-    .member-row .member-portrait{ order: 0 !important; width: 100%; height: 56vw; max-height: 280px; }
-    .member-row .member-text{ order: 1 !important; }
+    .member-row .member-portrait{ order: 0 !important; width: 100%; height: 62vw; max-height: 320px; }
+    .member-row .member-photo{ object-position: center 16%; }
+    .member-row .member-text{
+      order: 1 !important;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .member-row .member-text p,
+    .member-row .member-text h3,
+    .sub-manifesto,
+    .mission p,
+    .sonic-details p,
+    .connect p.lead,
+    .email-cta{
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
     .brand-mark{ display: none; }
-    .band-hero-title .line-two i{ transform: translateX(0); }
     .verse{ padding-left: 16px; }
   }
 
