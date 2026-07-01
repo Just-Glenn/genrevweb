@@ -222,6 +222,8 @@
     color: var(--text-muted);
     max-width: 56ch;
     margin: 0 0 2.2em 0;
+    position: relative;
+    left: 0;
   }
   .verse{
     margin-top: 4vh;
@@ -569,6 +571,11 @@
       word-break: break-word;
       hyphens: auto;
       padding-right: 10px;
+    }
+
+    .mission p{
+      left: 4px;
+      max-width: calc(100% - 4px);
     }
     .band-hero-title span{
       display: block;
